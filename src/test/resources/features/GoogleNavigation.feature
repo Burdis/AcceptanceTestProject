@@ -1,9 +1,5 @@
-Feature: Visit Google and click on a link
+Feature: Visiting a site
 
 @test
-  Scenario: Visit google.com and check the page title
-    Given I go to google
-    Then I will be on Google
-    Then I will click on Gmail
-    Then I will be on Gmail - Free Storage and Email from Google
-  
+  Scenario: Visit my selected site and check the page title
+    Given I go to my selected site
