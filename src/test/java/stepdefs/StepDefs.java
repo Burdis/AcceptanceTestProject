@@ -27,6 +27,5 @@ public class StepDefs implements En{
             WebElement titleBrowser = driver.findElement(By.linkText("Gmail"));
             titleBrowser.click();
         });
-
     }
 }

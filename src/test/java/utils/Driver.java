@@ -19,7 +19,7 @@ public class Driver {
                 driver.quit();
             }
         });
+
         return driver;
     }
-
 }
