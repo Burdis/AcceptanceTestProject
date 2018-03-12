@@ -8,7 +8,7 @@ public class Driver {
     private static WebDriver driver;
 
     public static WebDriver getDriver(){
-        String driverPath = "src/test/java/utils/drivers/chromedriver_mac64"; //you will need to download chromedriver for your OS if not using mac
+        String driverPath = "src/test/java/utils/drivers/chromedriver"; //you will need to download chromedriver for your OS if not using mac
         System.setProperty("webdriver.chrome.driver", driverPath);
 
         driver = new ChromeDriver();

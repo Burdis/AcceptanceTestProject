@@ -50,7 +50,7 @@ formatter.match({
   "location": "StepDefs.java:17"
 });
 formatter.result({
-  "duration": 1608607900,
+  "duration": 1494701331,
   "status": "passed"
 });
 formatter.match({
@@ -63,7 +63,7 @@ formatter.match({
   "location": "StepDefs.java:21"
 });
 formatter.result({
-  "duration": 14698080,
+  "duration": 9904684,
   "status": "passed"
 });
 formatter.match({
@@ -76,7 +76,7 @@ formatter.match({
   "location": "StepDefs.java:26"
 });
 formatter.result({
-  "duration": 4237744415,
+  "duration": 6307163204,
   "status": "passed"
 });
 formatter.match({
@@ -89,7 +89,7 @@ formatter.match({
   "location": "StepDefs.java:21"
 });
 formatter.result({
-  "duration": 11829918,
+  "duration": 14805199,
   "status": "passed"
 });
 });
