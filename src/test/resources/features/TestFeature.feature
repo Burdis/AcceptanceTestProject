@@ -1,7 +1,7 @@
-Feature: Visit Google and click on a link
+Feature: Visit a page and click on a link
 
 @test
-  Scenario: Visit google.com and check the page title
+  Scenario: Visit a page and check the page title
     Given I go to google
     Then I will be on Google
     Then I will click on Gmail
