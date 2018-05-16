@@ -1,31 +1,27 @@
 package steps;
 
-import cucumber.api.java8.En;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import utils.Driver;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import org.junit.Assert;
+import pages.Page;
 
-import static org.junit.Assert.assertEquals;
+public class StepDefs {
 
-public class StepDefs implements En{
+    private Page page;
 
-    private WebDriver driver = Driver.getDriver();
-
-    public StepDefs(){
-
-        Given("^I go to (.*)$", (String url) -> {
-            driver.navigate().to("https://" + url + ".co.uk/");
-        });
-
-        Then("^I will be on (.*)$", (String title) -> {
-            String titleBrowser = driver.getTitle();
-            assertEquals(title , titleBrowser);
-        });
-
-        Then("^I will click on (.*)$", (String title) -> {
-            WebElement titleBrowser = driver.findElement(By.linkText("Gmail"));
-            titleBrowser.click();
-        });
+    @Given("^I go to (.*)$")
+    public void iGoTo(final String url) {
+        page.getUrl(url);
     }
+
+    @Then("I will be on (.*)$")
+    public void iWillBeOn(final String currentPage) {
+        Assert.assertEquals(page.getTitle(), currentPage);
+    }
+
+    @Then("I click on the link")
+    public void iClickOnTheLink() {
+        page.clickLink("linkId");
+    }
+
 }
