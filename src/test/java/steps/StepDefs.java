@@ -1,9 +1,7 @@
 package steps;
 
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import cucumber.api.java8.En;
 import io.restassured.response.Response;
 import org.json.JSONObject;
