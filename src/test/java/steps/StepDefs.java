@@ -1,7 +1,10 @@
 package steps;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import cucumber.api.java8.En;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Assert;
@@ -9,7 +12,22 @@ import pages.Page;
 
 import static io.restassured.RestAssured.given;
 
-public class StepDefs extends Page {
+public class StepDefs extends Page implements En  {
+
+    public StepDefs() {
+        Given("lambda 1$", () -> getUrl("www."));
+
+        Then("lambda 2", () -> Assert.assertEquals(getTitle(),"nice"));
+
+        When("^lambda 3 (.*)$", (String link) -> {
+            clickLink(link);
+            iClickOnTheLink();
+        });
+
+        And("lambda 4", () -> {
+
+        });
+    }
 
     private int code;
 
