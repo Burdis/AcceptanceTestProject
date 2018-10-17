@@ -21,4 +21,15 @@ public class Page {
         WebElement getLink = driver.findElement(By.className(linkID));
         getLink.click();
     }
+
+    public void enterBirthDate() {
+        WebElement getDay = driver.findElement(By.id("dob-day"));
+        WebElement getMonth = driver.findElement(By.id("dob-month"));
+        WebElement getYear = driver.findElement(By.id("dob-year"));
+
+        getDay.sendKeys("19");
+        getMonth.sendKeys("05");
+        getYear.sendKeys("1994");
+    }
+
 }
