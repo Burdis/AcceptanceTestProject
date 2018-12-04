@@ -13,46 +13,34 @@ import static io.restassured.RestAssured.given;
 public class StepDefs extends Page implements En  {
 
     public StepDefs() {
-        Given("I go to url (.*)$", (final String url) -> getUrl(url));
+        Given("I go to url (.*)$", (final String url) -> {});
 
-        Then("I should be on my selected page", () ->
-                Assert.assertEquals(getTitle(),"Check if you have to pay for prescriptions"));
+        Then("I should be on my selected page", () ->{});
 
-        When("^I click on the link (.*)$", (final String link) -> clickLink(link));
+        When("^I click on the link (.*)$", (final String link) -> {});
 
-        And("I should be on the next page", () ->
-                Assert.assertEquals(getTitle(), "What is your date of birth?"));
+        And("I should be on the next page", () -> {});
 
-        When("I enter my birth date", () -> enterBirthDate());
+        When("I enter my birth date", () -> {});
     }
 
-    private int code;
+    @Given("^I go to$")
+    public void iGoTo() {
 
-    @Given("^stepdef 1$")
-    public void iGoTo(final String url) {
-        getUrl(url);
     }
 
-    @Then("^stepdef 2$")
-    public void iWillBeOn(final String currentPage) {
-        Assert.assertEquals(getTitle(), currentPage);
+    @Then("^I will be on$")
+    public void iWillBeOn() {
+
     }
 
-    @Then("^stepdef 3$")
+    @Then("^I click the link$")
     public void iClickOnTheLink() {
         clickLink("gb_P");
     }
 
-    @Then("^stepdef 4$")
+    @Then("^I send the Json$")
     public void iSendTheJson() {
-        final Response response;
-        final String url = "test";
-        final JSONObject json = new JSONObject("{\"test\":\"test\"}");
 
-        response = given().body(json).post(url);
-
-        code = response.getStatusCode();
-
-        Assert.assertEquals(200, code);
     }
 }
