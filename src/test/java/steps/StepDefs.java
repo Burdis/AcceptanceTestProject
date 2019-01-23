@@ -24,23 +24,4 @@ public class StepDefs extends Page implements En  {
         When("I enter my birth date", () -> {});
     }
 
-    @Given("^I go to$")
-    public void iGoTo() {
-
-    }
-
-    @Then("^I will be on$")
-    public void iWillBeOn() {
-
-    }
-
-    @Then("^I click the link$")
-    public void iClickOnTheLink() {
-        clickLink("gb_P");
-    }
-
-    @Then("^I send the Json$")
-    public void iSendTheJson() {
-
-    }
 }
