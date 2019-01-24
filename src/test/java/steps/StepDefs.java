@@ -13,9 +13,11 @@ import static io.restassured.RestAssured.given;
 public class StepDefs extends Page implements En  {
 
     public StepDefs() {
-        Given("I go to url (.*)$", (final String url) -> {});
+        Given("I go to url (.*)$", (final String url) ->  getUrl(url));
 
-        Then("I should be on my selected page", () ->{});
+        Then("I should be on my selected page", () -> {
+
+        });
 
         When("^I click on the link (.*)$", (final String link) -> {});
 

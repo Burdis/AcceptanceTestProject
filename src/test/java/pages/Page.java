@@ -15,7 +15,7 @@ public class Page {
     }
 
     public void getUrl(final String url) {
-
+        driver.navigate().to(url);
     }
 
     public void clickLink(final String linkID) {
