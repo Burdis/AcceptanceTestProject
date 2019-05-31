@@ -11,7 +11,7 @@ public class Driver {
     public static WebDriver getDriver(){
 
         if(SystemUtils.IS_OS_MAC) {
-            String driverPath = "src/test/java/utils/drivers/chromedriver_mac_245";
+            String driverPath = "src/test/java/utils/drivers/chromedriver_mac_v_274";
             System.setProperty("webdriver.chrome.driver", driverPath);
         } else if(SystemUtils.IS_OS_WINDOWS) {
             String driverPath = "src/test/java/utils/drivers/chromedriver_windows_245.exe";
